@@ -193,11 +193,15 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.02,
+                transition: { duration: 0.2, ease: "easeOut" } 
+              }}
               onClick={() => setSelectedNode(node)}
               className="group cursor-pointer"
             >
-              <div className="h-full p-8 rounded-2xl bg-[#111111] border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col glass-card">
+              <div className="h-full p-8 rounded-2xl bg-[#111111] border border-white/5 group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_-10px_rgba(59,130,246,0.2)] transition-all duration-300 flex flex-col glass-card">
                 <div className="flex justify-between items-start mb-6">
                   <div className={`p-3 rounded-xl bg-white/5 ${node.color} group-hover:scale-110 transition-transform duration-300`}>
                     <node.icon className="w-6 h-6" />
@@ -232,7 +236,8 @@ export default function App() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-emerald-500/5 border border-emerald-500/10 glass-card"
+            whileHover={{ scale: 1.01, y: -4 }}
+            className="p-8 rounded-3xl bg-emerald-500/5 border border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300 glass-card"
           >
             <h2 className="text-2xl font-medium text-emerald-400 mb-6 flex items-center gap-2">
               <CheckCircle2 className="w-6 h-6" />
@@ -262,7 +267,8 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-rose-500/5 border border-rose-500/10 glass-card"
+            whileHover={{ scale: 1.01, y: -4 }}
+            className="p-8 rounded-3xl bg-rose-500/5 border border-rose-500/10 hover:border-rose-500/30 transition-all duration-300 glass-card"
           >
             <h2 className="text-2xl font-medium text-rose-400 mb-6 flex items-center gap-2">
               <AlertCircle className="w-6 h-6" />
