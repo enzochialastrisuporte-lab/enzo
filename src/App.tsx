@@ -296,6 +296,40 @@ export default function App() {
         </div>
       </section>
 
+      {/* Technical Workflow Section */}
+      <section className="max-w-7xl mx-auto mb-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="p-8 md:p-12 rounded-3xl bg-blue-500/5 border border-blue-500/10 glass-card overflow-hidden"
+        >
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-medium mb-6 flex items-center gap-3">
+              <Layers className="w-8 h-8 text-blue-400" />
+              Arquitetura do Fluxo
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              A <span className="text-blue-400 font-medium">AutomaçaoOne</span> opera através de um ecossistema complexo no n8n, estruturado em blocos lógicos que garantem precisão absoluta. O fluxo gerencia desde o <span className="text-white/80">Checklist inicial</span> até o tratamento avançado de <span className="text-white/80">Mensagens Encavaladas</span>, assegurando que nenhuma instrução seja perdida.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-8">
+              O "coração" da automação integra APIs do <span className="text-blue-400/80">Google Drive/Calendar</span>, faturamento via <span className="text-blue-400/80">Asaas</span> e gestão de chat pelo <span className="text-blue-400/80">Chatwoot</span>. Após o processamento, o sistema realiza o tratamento de output do agente e pré-processamento de resposta, culminando na síntese de voz premium da <span className="text-blue-400/80">ElevenLabs</span>.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-widest text-gray-400">
+                n8n Engine
+              </div>
+              <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-widest text-gray-400">
+                Multi-Agent System
+              </div>
+              <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-widest text-gray-400">
+                Real-time Sync
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Footer */}
       <footer className="max-w-7xl mx-auto mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-600 text-xs font-mono uppercase tracking-widest">
         <p>© 2026 Chialastri Automações • AutomaçaoOne</p>
